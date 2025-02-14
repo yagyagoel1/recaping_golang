@@ -28,4 +28,6 @@ func main() {
 	}
 	processIt(fn)
 	fnn := processF()
+
+	fnn(1)
 }
