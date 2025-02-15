@@ -4,8 +4,8 @@ import (
 	"fmt"
 )
 
-func emailSender(emailChan <-chan string, done chan bool) {
-	defer func(done chan bool) { done <- true }(done)
+func emailSender(emailChan <-chan string, done chan<- bool) {
+	defer func(done chan<- bool) { done <- true }(done)
 	for email := range emailChan {
 		// time.Sleep(time.Second)
 		fmt.Println("send email to ", email)
