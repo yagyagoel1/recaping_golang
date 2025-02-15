@@ -5,6 +5,9 @@ import "fmt"
 func changeNum(num *int) {
 	*num = 5
 	fmt.Println("In changeNumber", *num)
+	var n int
+	n = *num
+	fmt.Println("n", n)
 }
 func main() {
 
